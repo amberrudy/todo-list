@@ -51,7 +51,7 @@ export default class App extends Component {
            <input
             type = "checkbox"
             checked={item.done}
-            onChange= { () => this.toggleToDo(item)}
+            onChange= {() => this.toggleToDo(item)}
            /> 
          </td>
       </tr>
@@ -65,25 +65,24 @@ render = () => (
     <div className="container-fluid">
       <div className="my-1">
         <input
-          className = "form-control"
+          className="form-control"
           value = {this.state.newItemText}
           onChange = {this.updateNewTextValue}
         />  
-    <button className="btn btn-primary mt-1" onClick={this.createNewTodo}>
-      Add
-    </button>  
-    <table className= "table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th>Description</th>
-          <th>Done</th>
-        </tr>
-      </thead>
-      <tbody>{this.todoTableRows()}</tbody>
-    </table>
-
-   </div>
-   </div>
-  </div>
-);
-};
+       <button className="btn btn-primary mt-1" onClick={this.createNewToDo}>
+          Add
+       </button>  
+       <table className= "table table-striped table-bordered">
+           <thead>
+             <tr>
+              <th>Description</th>
+              <th>Done</th>
+           </tr>
+          </thead>
+         <tbody>{this.todoTableRows()}</tbody>
+        </table>
+      </div>
+     </div>
+    </div>
+  );
+}
